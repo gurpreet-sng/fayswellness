@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fay's Wellness</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+</head>
+
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <!-- Breadcrumb Section -->
+  <section class="breadcrumb-section">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Power Programmer Chips</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Product Detail Section -->
+  <section class="product-detail-section">
+    <div class="container">
+      <div class="row">
+        <!-- Product Images -->
+        <div class="col-lg-6 mb-4">
+          <div class="product-images-wrapper">
+            <div class="main-product-image">
+              <img src="images/Skyn.jpg" alt="Power Programmer Chips" id="mainImage">
+            </div>
+            <div class="product-thumbnails">
+              <div class="thumbnail-item active">
+                <img src="images/Skyn.jpg" alt="Thumbnail 1" onclick="changeImage(this)">
+              </div>
+              <div class="thumbnail-item">
+                <img src="images/Skyn.jpg" alt="Thumbnail 2" onclick="changeImage(this)">
+              </div>
+              <div class="thumbnail-item">
+                <img src="images/Skyn.jpg" alt="Thumbnail 3" onclick="changeImage(this)">
+              </div>
+              <div class="thumbnail-item">
+                <img src="images/Skyn.jpg" alt="Thumbnail 4" onclick="changeImage(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="col-lg-6">
+          <div class="product-detail-info">
+            <h1 class="product-detail-title">Power Programmer Chips</h1>
+
+            <div class="product-detail-rating">
+              <div class="stars">
+                <span class="star-icon">★</span>
+                <span class="star-icon">★</span>
+                <span class="star-icon">★</span>
+                <span class="star-icon">★</span>
+                <span class="star-icon">★</span>
+              </div>
+              <span class="rating-text">(4.8/5)</span>
+            </div>
+
+            <div class="product-detail-price">
+              <span class="price-current">$500.00</span>
+            </div>
+
+            <p class="product-short-desc">
+              High performance power programmer chips designed to enhance engine output and fuel efficiency.
+            </p>
+
+            <div class="product-meta">
+              <div class="meta-item">
+                <span class="meta-label">Brand:</span>
+                <span class="meta-value">Bosch</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Category:</span>
+                <span class="meta-value">Engine</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Availability:</span>
+                <span class="meta-value in-stock">In Stock</span>
+              </div>
+            </div>
+
+            <div class="product-actions">
+              <div class="quantity-selector">
+                <button class="qty-btn minus" onclick="decreaseQty()">-</button>
+                <input type="number" id="quantity" value="1" min="1" max="10" readonly>
+                <button class="qty-btn plus" onclick="increaseQty()">+</button>
+              </div>
+              <button class="btn-add-to-cart">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+              <button class="btn-wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+
+            <div class="product-features">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Material: Aluminum Body</li>
+                <li>Warranty: 1 Year</li>
+                <li>Compatibility: All models</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Tabs -->
+      <div class="product-tabs-section">
+        <ul class="product-tabs-nav" role="tablist">
+          <li class="tab-item">
+            <button class="tab-link active" data-tab="description">Description</button>
+          </li>
+          <li class="tab-item">
+            <button class="tab-link" data-tab="additional-info">Additional Info</button>
+          </li>
+          <li class="tab-item">
+            <button class="tab-link" data-tab="reviews">Reviews</button>
+          </li>
+        </ul>
+
+        <div class="product-tabs-content">
+          <!-- Description Tab -->
+          <div class="tab-pane active" id="description">
+            <h3>Product Description</h3>
+            <p>These power programmer chips are engineered to deliver maximum performance, improve throttle response and
+              fuel efficiency.</p>
+            <p>Our advanced technology ensures optimal engine performance while maintaining reliability and longevity.
+              The chips are designed with precision engineering to provide seamless integration with your vehicle's
+              existing systems.</p>
+            <h4>Benefits:</h4>
+            <ul>
+              <li>Enhanced engine performance and power output</li>
+              <li>Improved fuel efficiency by up to 15%</li>
+              <li>Better throttle response and acceleration</li>
+              <li>Easy installation with plug-and-play design</li>
+              <li>Compatible with most modern vehicles</li>
+            </ul>
+          </div>
+
+          <!-- Additional Info Tab -->
+          <div class="tab-pane" id="additional-info">
+            <h3>Additional Information</h3>
+            <table class="info-table">
+              <tr>
+                <td class="info-label">Material</td>
+                <td class="info-value">Aluminum Body</td>
+              </tr>
+              <tr>
+                <td class="info-label">Warranty</td>
+                <td class="info-value">1 Year</td>
+              </tr>
+              <tr>
+                <td class="info-label">Compatibility</td>
+                <td class="info-value">All models</td>
+              </tr>
+              <tr>
+                <td class="info-label">Weight</td>
+                <td class="info-value">0.5 kg</td>
+              </tr>
+              <tr>
+                <td class="info-label">Dimensions</td>
+                <td class="info-value">10 x 5 x 3 cm</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Reviews Tab -->
+          <div class="tab-pane" id="reviews">
+            <h3>Customer Reviews</h3>
+            <div class="reviews-summary">
+              <div class="average-rating">
+                <span class="rating-number">4.8</span>
+                <div class="rating-stars">
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                </div>
+                <p>Based on 24 reviews</p>
+              </div>
+            </div>
+
+            <div class="reviews-list">
+              <div class="review-item">
+                <div class="review-header">
+                  <div class="reviewer-info">
+                    <h5 class="reviewer-name">John Doe</h5>
+                    <div class="review-rating">
+                      <span class="star-icon">★</span>
+                      <span class="star-icon">★</span>
+                      <span class="star-icon">★</span>
+                      <span class="star-icon">★</span>
+                      <span class="star-icon">★</span>
+                    </div>
+                  </div>
+                  <span class="review-date">2 weeks ago</span>
+                </div>
+                <p class="review-text">Very good performance upgrade. Highly recommended! The installation was
+                  straightforward and I noticed immediate improvements in throttle response.</p>
+              </div>
+
+              <div class="review-item">
+                <div class="review-header">
+                  <div class="reviewer-info">
+                    <h5 class="reviewer-name">Sarah Johnson</h5>
+                    <div class="review-rating">
+                      <span class="star-icon">★</span>
+                      <span class="star-icon">★</span>
+                      <span class="star-icon">★</span>
+                      <span class="star-icon">★</span>
+                      <span class="star-icon">★</span>
+                    </div>
+                  </div>
+                  <span class="review-date">1 month ago</span>
+                </div>
+                <p class="review-text">Excellent product! My fuel efficiency has improved significantly. Worth every
+                  penny.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <div class="related-products-section">
+        <h2 class="section-title-related">Related Products</h2>
+        <div class="row">
+          <!-- Related Product 1 -->
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/item1.jpg" alt="Related Product 1">
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Quick View</button>
+                  <button class="btn-add-cart">Add to Cart</button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h6 class="product-title">Power Programmer Chips</h6>
+                <div class="product-rating">
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="rating-count">(5)</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-new">$500.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Product 2 -->
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+            <div class="product-card">
+              <div class="product-image">
+                <span class="badge-new">New</span>
+                <img src="images/item1.jpg" alt="Related Product 2">
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Quick View</button>
+                  <button class="btn-add-cart">Add to Cart</button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h6 class="product-title">Power Programmer Chips</h6>
+                <div class="product-rating">
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="rating-count">(4)</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-new">$500.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Product 3 -->
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+            <div class="product-card">
+              <div class="product-image">
+                <span class="badge-discount">-15%</span>
+                <img src="images/item1.jpg" alt="Related Product 3">
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Quick View</button>
+                  <button class="btn-add-cart">Add to Cart</button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h6 class="product-title">Power Programmer Chips</h6>
+                <div class="product-rating">
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="rating-count">(3)</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-old">$590.00</span>
+                  <span class="price-new">$500.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Product 4 -->
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/item1.jpg" alt="Related Product 4">
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Quick View</button>
+                  <button class="btn-add-cart">Add to Cart</button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h6 class="product-title">Power Programmer Chips</h6>
+                <div class="product-rating">
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="rating-count">(5)</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-new">$500.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    // Function to load external HTML files
+    function loadComponent(elementId, filePath, callback) {
+      fetch(filePath)
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+          if (callback) callback();
+        })
+        .catch(error => console.error('Error loading component:', error));
+    }
+
+    // Initialize Header Functionality (runs after header.html is loaded)
+    function initHeader() {
+      // Mobile Menu Toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const headerNav = document.getElementById('headerNav');
+      const menuOverlay = document.getElementById('menuOverlay');
+
+      if (menuToggle && headerNav && menuOverlay) {
+        const menuIcon = '<img src="images/menu.png" alt="Menu">';
+        const closeIcon = '<img src="images/close.png" alt="Close">';
+
+        function updateMenuState(isActive) {
+          if (isActive) {
+            headerNav.classList.add('active');
+            menuOverlay.classList.add('active');
+            menuToggle.innerHTML = closeIcon;
+            document.body.style.overflow = 'hidden';
+          } else {
+            headerNav.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            menuToggle.innerHTML = menuIcon;
+            document.body.style.overflow = '';
+          }
+        }
+
+        menuToggle.addEventListener('click', () => {
+          const isActive = !headerNav.classList.contains('active');
+          updateMenuState(isActive);
+        });
+
+        menuOverlay.addEventListener('click', () => {
+          updateMenuState(false);
+        });
+      }
+
+      // Mobile Dropdown Toggle
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        if (toggle) {
+          toggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 767) {
+              e.preventDefault();
+              dropdown.classList.toggle('active');
+            }
+          });
+        }
+      });
+
+      // searchbox
+      document.getElementById("openSearch").onclick = function () {
+        document.getElementById("searchPopup").style.display = "flex";
+      };
+
+      document.getElementById("closeSearch").onclick = function () {
+        document.getElementById("searchPopup").style.display = "none";
+      };
+
+
+      // Initialize Smooth Scrolling for Nav Links (after header load)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+              // Close mobile menu if open
+              if (headerNav && headerNav.classList.contains('active')) {
+                headerNav.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                menuToggle.innerHTML = '<img src="images/menu.png" alt="Menu">';
+                document.body.style.overflow = '';
+              }
+            }
+          }
+        });
+      });
+    }
+
+    // Load Header and Footer
+    document.addEventListener('DOMContentLoaded', () => {
+      const timestamp = new Date().getTime();
+      loadComponent('header-placeholder', `header.html?v=${timestamp}`, initHeader);
+      loadComponent('footer-placeholder', `footer.html?v=${timestamp}`);
+    });
+
+
+
+
+
+    // Slick Carousel Initialization
+    $(document).ready(function () {
+      // Testimonial Carousel
+      $('.testimonial-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 800,
+        fade: true,
+        cssEase: 'linear',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        appendDots: $('.testimonial-pagination'),
+        customPaging: function (slider, i) {
+          return '<span class="slick-dot"></span>';
+        }
+      });
+
+      // Gallery Carousel
+      $('.gallery-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('.gallery-prev'),
+        nextArrow: $('.gallery-next'),
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+      const $carousel = $('.rituals-carousel');
+
+      function updateStaggeredLayout() {
+        // Remove existing class from all slides
+        $carousel.find('.ritual-card').removeClass('ritual-card-offset');
+
+        // Find currently visible active slides in the DOM
+        const $activeSlides = $carousel.find('.slick-active');
+        if ($activeSlides.length === 3) {
+          // Add offset to the middle one (index 1 of active set)
+          $activeSlides.eq(1).find('.ritual-card').addClass('ritual-card-offset');
+        }
+      }
+
+      $carousel.on('init afterChange', function (event, slick, currentSlide) {
+        updateStaggeredLayout();
+      });
+
+      $carousel.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        // Run update when transition starts and ends
+        setTimeout(updateStaggeredLayout, 50);
+      });
+
+      $carousel.slick({
+        dots: true,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        appendDots: $('.pagination-dots'),
+        customPaging: function (slider, i) {
+          return '<span class="dot"></span>';
+        },
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+
+      // Initial run
+      const slickInstance = $carousel.slick('getSlick');
+      updateStaggeredLayout(slickInstance);
+    });
+
+    // Countdown Timer Logic
+    function updateCountdowns() {
+      const timers = document.querySelectorAll('.countdown-timer');
+
+      timers.forEach(timer => {
+        const endDateStr = timer.getAttribute('data-end-date');
+        if (!endDateStr) return;
+
+        const endDate = new Date(endDateStr).getTime();
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        if (distance < 0) {
+          timer.style.display = 'none';
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const boxes = timer.querySelectorAll('.time-box span');
+        if (boxes.length === 4) {
+          boxes[0].textContent = String(days).padStart(3, '0');
+          boxes[1].textContent = String(hours).padStart(2, '0');
+          boxes[2].textContent = String(minutes).padStart(2, '0');
+          boxes[3].textContent = String(seconds).padStart(2, '0');
+        }
+      });
+    }
+
+    setInterval(updateCountdowns, 1000);
+    updateCountdowns(); // Initial call
+
+    // Product Detail Page Functions
+    // Image Gallery
+    function changeImage(thumbnail) {
+      const mainImage = document.getElementById('mainImage');
+      if (mainImage) {
+        mainImage.src = thumbnail.src;
+
+        // Update active thumbnail
+        document.querySelectorAll('.thumbnail-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        thumbnail.parentElement.classList.add('active');
+      }
+    }
+
+    // Quantity Selector
+    function increaseQty() {
+      const qtyInput = document.getElementById('quantity');
+      if (qtyInput) {
+        let currentValue = parseInt(qtyInput.value);
+        if (currentValue < parseInt(qtyInput.max)) {
+          qtyInput.value = currentValue + 1;
+        }
+      }
+    }
+
+    function decreaseQty() {
+      const qtyInput = document.getElementById('quantity');
+      if (qtyInput) {
+        let currentValue = parseInt(qtyInput.value);
+        if (currentValue > parseInt(qtyInput.min)) {
+          qtyInput.value = currentValue - 1;
+        }
+      }
+    }
+
+    // Product Tabs
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabLinks = document.querySelectorAll('.tab-link');
+      const tabPanes = document.querySelectorAll('.tab-pane');
+
+      tabLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          const targetTab = this.getAttribute('data-tab');
+
+          // Remove active class from all tabs and panes
+          tabLinks.forEach(l => l.classList.remove('active'));
+          tabPanes.forEach(p => p.classList.remove('active'));
+
+          // Add active class to clicked tab and corresponding pane
+          this.classList.add('active');
+          const targetPane = document.getElementById(targetTab);
+          if (targetPane) {
+            targetPane.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
