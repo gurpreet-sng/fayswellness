@@ -15,8 +15,22 @@ a {
     text-decoration: none;
 }
 
+.service-detail-card.bridal-card {
+    margin-top: 60px;
+}
+
 .breadcrumb-item+.breadcrumb-item::before {
     display: none;
+}
+
+.benefits-section {
+    padding: 100px 0px;
+}
+
+.header-utilities{
+    display: flex !important; 
+    align-items: center !important; 
+    gap: 25px !important;
 }
 
 /* ================= SEARCH ICON BUTTON ================= */
@@ -597,12 +611,15 @@ a {
     }
 
     .nav-menu {
-        gap: 15px;
+        gap: 10px;
     }
 
     .header-logo {
         flex-grow: 1;
         text-align: center;
+    }
+    .header-utilities{
+        gap: 10px !important;
     }
 }
 
@@ -899,24 +916,25 @@ a {
 .about-footer {
     display: flex;
     align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    gap: 30px;
+    flex-wrap: nowrap;
 }
 
 .btn-learn-more {
     background-color: #9D5F6D;
     color: #ffffff;
-    padding: 18px 40px;
-    border-radius: 40px;
+    padding: 16px 35px;
+    border-radius: 50px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     transition: all 0.3s ease;
     border: none;
     font-family: "Jost", sans-serif;
+    white-space: nowrap;
 }
 
 .btn-learn-more:hover {
@@ -932,27 +950,32 @@ a {
 }
 
 .contact-info {
+    align-items: center;
     gap: 15px;
     text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .phone-icon-circle {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     background-color: #9D5F6D;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .phone-icon-circle:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .phone-icon-circle img {
-    width: 22px;
+    width: 24px;
+    height: auto;
     filter: brightness(0) invert(1);
 }
 
@@ -962,18 +985,21 @@ a {
 }
 
 .phone-text .label {
-    font-size: 14px;
-    color: #050505;
-    font-weight: 500;
-    opacity: 0.6;
+    font-size: 15px;
+    color: #555555;
+    font-weight: 600;
     font-family: "Jost", sans-serif;
+    margin-bottom: 2px;
+    line-height: 1.2;
 }
 
 .phone-text .number {
-    font-size: 20px;
-    color: #050505;
+    font-size: 22px;
+    color: #000000;
     font-weight: 700;
     font-family: "Jost", sans-serif;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
 }
 
 /* Responsiveness for About Us */
@@ -1438,8 +1464,10 @@ a {
 }
 
 @media (max-width: 991px) {
+
     .section-main-title {
         font-size: 40px;
+        line-height: 1.1;
     }
 
     .product-title {
@@ -2986,6 +3014,10 @@ a {
     .sort-select {
         flex: 1;
     }
+
+    .header-logo {
+        width: auto;
+    }
 }
 
 @media (max-width: 767px) {
@@ -3870,5 +3902,953 @@ a {
     .form-title {
         font-size: 32px;
         margin-bottom: 30px;
+    }
+}
+
+/* ==========================================================================
+   Services Page Styles
+   ========================================================================== */
+
+.services-hero {
+    padding: 100px 0 60px;
+    background-color: #F7F4F0;
+}
+
+.services-hero .breadcrumb {
+    margin-bottom: 30px;
+}
+
+.services-hero .breadcrumb-item a {
+    color: #9b6b77;
+    font-weight: 500;
+}
+
+.services-hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    color: #1a1a1a;
+}
+
+.services-grid-section {
+    padding: 120px 0;
+    background-color: #ffffff;
+}
+
+.service-detail-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.service-detail-card.reverse {
+    flex-direction: row;
+}
+
+.service-image-box {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.service-image-box img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.service-detail-card:hover .service-image-box img {
+    transform: scale(1.05);
+}
+
+.service-content-box {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.service-number {
+    display: block;
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #9b6b77;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.service-number::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: #9b6b77;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.service-content-box h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+}
+
+.service-content-box p {
+    font-family: "Jost", sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn-service-link {
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-service-link i {
+    transition: transform 0.3s ease;
+}
+
+.btn-service-link:hover {
+    color: #9b6b77;
+}
+
+.btn-service-link:hover i {
+    transform: translateX(5px);
+}
+
+.bridal-card {
+    background: #F7F4F0;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.bridal-card .service-image-box {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px 30px;
+}
+
+.bridal-card .service-image-box img {
+    height: 500px;
+}
+
+.bridal-card .service-content-box {
+    padding: 60px;
+}
+
+.services-connect {
+    padding: 120px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/ritualbg.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+.connect-box h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.connect-box p {
+    font-family: "Jost", sans-serif;
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.services-connect .btn-outline-fay {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.services-connect .btn-outline-fay:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/* Responsive Styles for Services */
+@media (max-width: 991px) {
+    .service-detail-card {
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .service-detail-card .service-image-box {
+        order: -1;
+    }
+
+    .service-image-box {
+        width: 100%;
+    }
+
+    .service-image-box img {
+        height: 350px;
+    }
+
+    .service-content-box h3 {
+        font-size: 36px;
+    }
+
+    .bridal-card .service-image-box img {
+        height: 350px;
+    }
+
+    .bridal-card .service-content-box {
+        padding: 40px;
+    }
+
+    .connect-box h2 {
+        font-size: 42px;
+    }
+
+    .bridal-card .service-image-box {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .services-hero {
+        padding: 80px 0 40px;
+    }
+
+    .services-grid-section {
+        padding: 80px 0;
+    }
+
+    .services-connect {
+        padding: 80px 0;
+    }
+
+    .service-detail-card.bridal-card {
+        margin-top: 0px;
+    }
+}
+
+/* ==========================================================================
+   Service Detail Page Styles
+   ========================================================================== */
+
+.detail-hero-section {
+    padding: 120px 0 80px;
+    background-color: #F7F4F0;
+    overflow: hidden;
+}
+
+.service-category {
+    display: block;
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #9b6b77;
+    margin-bottom: 20px;
+}
+
+.detail-hero-content .service-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.service-intro {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.scroll-link {
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.scroll-link i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.scroll-link:hover i {
+    transform: translateY(5px);
+}
+
+.detail-hero-image {
+    position: relative;
+    padding: 20px;
+}
+
+.rounded-circle-custom {
+    border-radius: 50% 50% 0 50%;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 50px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.experience-badge .years {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #9b6b77;
+}
+
+.experience-badge .text {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.rituals-detail-grid {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.ritual-detail-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    height: 100%;
+    border: 1px solid #eee;
+}
+
+.ritual-detail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.ritual-detail-card .card-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.ritual-detail-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.ritual-detail-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.ritual-detail-card .card-content {
+    padding: 30px;
+}
+
+.ritual-detail-card .card-content h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.ritual-perks {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.ritual-perks li {
+    font-size: 13px;
+    font-weight: 600;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ritual-perks li i {
+    color: #9b6b77;
+}
+
+@media (max-width: 991px) {
+    .detail-hero-section {
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+
+    .detail-hero-content .service-title {
+        font-size: 48px;
+    }
+
+    .service-intro {
+        margin: 0 auto 40px;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .detail-hero-image {
+        margin-top: 60px;
+    }
+
+    .rituals-detail-grid {
+        padding: 60px 0 100px;
+    }
+}
+
+/* ==========================================================================
+   Minimal Blog Styles
+   ========================================================================== */
+
+.blog-hero-minimal {
+    padding: 100px 0 60px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.blog-main-heading {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 56px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.blog-breadcrumb {
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.blog-breadcrumb a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-breadcrumb a:hover {
+    color: #9b6b77;
+}
+
+.blog-breadcrumb span {
+    margin: 0 10px;
+}
+
+.blog-listing-section {
+    padding: 80px 0;
+}
+
+.blog-post-card {
+    background: transparent;
+    transition: all 0.4s ease;
+}
+
+.post-img-box {
+    overflow: hidden;
+    margin-bottom: 25px;
+    border-radius: 4px;
+}
+
+.post-img-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.blog-post-card:hover .post-img-box img {
+    transform: scale(1.05);
+}
+
+.post-body .post-date {
+    display: block;
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9b6b77;
+    margin-bottom: 15px;
+}
+
+.post-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.post-title a {
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-title a:hover {
+    color: #9b6b77;
+}
+
+.post-desc {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.post-link {
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #1a1a1a;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease;
+}
+
+.post-link:hover {
+    color: #9b6b77;
+    gap: 12px;
+}
+
+/* Minimal Pagination */
+.pagination-minimal {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 40px;
+}
+
+.pagination-minimal li {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-minimal li.active {
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.pagination-minimal li:hover:not(.active):not(.disabled) {
+    color: #9b6b77;
+}
+
+.pagination-minimal li.disabled {
+    color: #ccc;
+    cursor: default;
+}
+
+/* Detail Page Header */
+.blog-detail-wrapper {
+    padding: 120px 0 100px;
+}
+
+.blog-post-header {
+    margin-bottom: 60px;
+}
+
+.blog-post-meta {
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.blog-post-meta .post-category {
+    color: #9b6b77;
+    font-weight: 600;
+}
+
+.dot-separator {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 15px;
+    vertical-align: middle;
+}
+
+.blog-post-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.blog-post-featured-image {
+    margin-bottom: 60px;
+}
+
+.blog-post-featured-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.blog-post-content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.blog-post-content h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 50px 0 25px;
+}
+
+.lead-text {
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.text-quote {
+    padding: 40px;
+    background: #fdfaf7;
+    border-left: 4px solid #9b6b77;
+    margin: 60px 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    font-style: italic;
+    color: #444;
+}
+
+.content-gallery {
+    margin: 60px 0;
+}
+
+.content-gallery img {
+    border-radius: 4px;
+}
+
+.blog-post-footer {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 40px;
+    margin-top: 80px;
+}
+
+.post-social-share span {
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.post-social-share a {
+    color: #1a1a1a;
+    margin-right: 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.post-social-share a:hover {
+    color: #9b6b77;
+}
+
+.back-link {
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-link:hover {
+    color: #9b6b77;
+}
+
+@media (max-width: 991px) {
+    .blog-post-title {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 767px) {
+    .blog-hero-minimal {
+        padding: 60px 0 40px;
+    }
+
+    .blog-main-heading {
+        font-size: 40px;
+    }
+
+    .blog-post-title {
+        font-size: 32px;
+    }
+
+    .blog-detail-wrapper {
+        padding: 80px 0 60px;
+    }
+}
+
+/* ==========================================================================
+   Portfolio / Gallery Styles
+   ========================================================================== */
+
+.portfolio-hero {
+    padding: 120px 0 60px;
+    background-color: #F7F4F0;
+}
+
+.portfolio-title {
+    font-family: "Cormorant Gramond", serif;
+    font-size: 56px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.portfolio-subtitle {
+    font-family: "Jost", sans-serif;
+    font-size: 16px;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+.portfolio-grid-section {
+    padding: 80px 0;
+}
+
+.gallery-item-wrapper {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #000;
+}
+
+.portfolio-img-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-img-box img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gallery-icon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(155, 107, 119, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    color: #fff;
+    font-size: 24px;
+}
+
+.gallery-item-wrapper:hover .gallery-icon-overlay {
+    opacity: 1;
+}
+
+.gallery-item-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+/* Lightbox Modal */
+.fays-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.fays-lightbox.active {
+    display: flex;
+}
+
+.lightbox-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(5px);
+}
+
+.lightbox-content {
+    position: relative;
+    z-index: 1;
+    max-width: 90%;
+    max-height: 80vh;
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 4px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption {
+    color: #fff;
+    font-family: "Cormorant Gramond", serif;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.lightbox-close:hover {
+    transform: rotate(90deg);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 20px;
+    transition: color 0.3s ease;
+    z-index: 2;
+}
+
+.nav-prev {
+    left: 40px;
+}
+
+.nav-next {
+    right: 40px;
+}
+
+.lightbox-nav:hover {
+    color: #9b6b77;
+}
+
+@media (max-width: 767px) {
+    .portfolio-hero {
+        padding: 80px 0 40px;
+    }
+
+    .portfolio-title {
+        font-size: 40px;
+    }
+
+    .portfolio-img-box img {
+        height: 300px;
+    }
+
+    .lightbox-nav {
+        padding: 10px;
+        font-size: 24px;
+    }
+
+    .nav-prev {
+        left: 10px;
+    }
+
+    .nav-next {
+        right: 10px;
+    }
+
+    .lightbox-close {
+        top: 20px;
+        right: 20px;
+    }
+
+    .lightbox-caption {
+        font-size: 18px;
     }
 }
