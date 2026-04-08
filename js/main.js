@@ -121,6 +121,20 @@ function initHeader() {
           }
         });
     });
+    // Quantity Controls
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.qty-btn')) {
+            const btn = e.target.closest('.qty-btn');
+            const input = btn.parentElement.querySelector('.qty-input');
+            let val = parseInt(input.value);
+            
+            if (btn.classList.contains('plus')) {
+                input.value = val + 1;
+            } else if (btn.classList.contains('minus') && val > 1) {
+                input.value = val - 1;
+            }
+        }
+    });
 }
 
 // Global Loaders
