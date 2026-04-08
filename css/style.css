@@ -3277,7 +3277,11 @@ a {
 
 .qty-btn:hover {
     background: #9b6b77;
-    color: #ffffff;
+    color: #ffffff !important;
+}
+
+.quantity-control .qty-btn {
+    border-radius: 100px;
 }
 
 .quantity-selector input {
@@ -5073,11 +5077,29 @@ a {
     padding: 10px;
 }
 
-.cart-col.product { flex: 3; }
-.cart-col.price { flex: 1; text-align: center; }
-.cart-col.quantity { flex: 1.5; text-align: center; }
-.cart-col.total { flex: 1; text-align: center; }
-.cart-col.remove { flex: 0.5; text-align: center; }
+.cart-col.product {
+    flex: 3;
+}
+
+.cart-col.price {
+    flex: 1;
+    text-align: center;
+}
+
+.cart-col.quantity {
+    flex: 1.5;
+    text-align: center;
+}
+
+.cart-col.total {
+    flex: 1;
+    text-align: center;
+}
+
+.cart-col.remove {
+    flex: 0.5;
+    text-align: center;
+}
 
 .cart-item {
     display: flex;
@@ -5279,14 +5301,14 @@ a {
     .cart-section {
         padding: 60px 0;
     }
-    
+
     .cart-item {
         flex-direction: column;
         align-items: flex-start;
         position: relative;
         padding-right: 40px;
     }
-    
+
     .cart-col {
         width: 100%;
         text-align: left !important;
@@ -5295,12 +5317,12 @@ a {
         justify-content: space-between;
         align-items: center;
     }
-    
+
     .cart-col.product {
         display: block;
         margin-bottom: 15px;
     }
-    
+
     .cart-col:not(.product)::before {
         content: attr(data-label);
         font-weight: 600;
@@ -5310,36 +5332,36 @@ a {
         color: #888;
         margin-right: 15px;
     }
-    
+
     .cart-col.remove {
         position: absolute;
         top: 20px;
         right: 15px;
         width: auto;
     }
-    
+
     .cart-col.remove::before {
         display: none;
     }
-    
+
     .cart-actions {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .coupon-wrapper {
         width: 100%;
         justify-content: space-between;
     }
-    
+
     .coupon-input {
         width: 65%;
     }
-    
+
     .update-cart {
         width: 100%;
     }
-    
+
     .cart-summary-card {
         margin-top: 40px;
         padding: 30px;
