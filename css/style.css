@@ -5342,7 +5342,32 @@ a {
 
     .cart-col.remove::before {
         display: none;
-    
+    }
+
+    .cart-actions {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .coupon-wrapper {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .coupon-input {
+        width: 65%;
+    }
+
+    .update-cart {
+        width: 100%;
+    }
+
+    .cart-summary-card {
+        margin-top: 40px;
+        padding: 30px;
+    }
+}
+
 /* ==========================================================================
    Account Page Styles
    ========================================================================== */
@@ -5489,30 +5514,5 @@ a {
     
     .auth-title {
         font-size: 28px;
-    }
-}
-
-
-    .cart-actions {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .coupon-wrapper {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .coupon-input {
-        width: 65%;
-    }
-
-    .update-cart {
-        width: 100%;
-    }
-
-    .cart-summary-card {
-        margin-top: 40px;
-        padding: 30px;
     }
 }
