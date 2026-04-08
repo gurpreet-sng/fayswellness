@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fay's Wellness</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+</head>
+
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <!-- Breadcrumb Section -->
+  <section class="breadcrumb-section">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Account</li>
+        </ol>
+      </nav>
+      <h1 class="page-title">My Account</h1>
+    </div>
+  </section>
+
+  <!-- Account Section -->
+  <section class="account-auth-section">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Login Form -->
+        <div class="col-lg-6">
+          <div class="auth-card login-card">
+            <h2 class="auth-title">Login</h2>
+            <p class="auth-subtitle">Welcome back! Please enter your details.</p>
+            <form action="#" class="auth-form">
+              <div class="form-group">
+                <label for="login-email">Username or email address *</label>
+                <input type="email" id="login-email" class="form-control-fay" required>
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password *</label>
+                <div class="password-wrapper">
+                  <input type="password" id="login-password" class="form-control-fay" required>
+                  <button type="button" class="toggle-password"><i class="far fa-eye"></i></button>
+                </div>
+              </div>
+              <div class="auth-tools">
+                <label class="remember-me">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  Remember me
+                </label>
+                <a href="#" class="forgot-password">Lost your password?</a>
+              </div>
+              <button type="submit" class="btn btn-primary-fay w-100 mt-4">Log In</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Register Form -->
+        <div class="col-lg-6">
+          <div class="auth-card register-card">
+            <h2 class="auth-title">Register</h2>
+            <p class="auth-subtitle">Create an account to enjoy exclusive benefits.</p>
+            <form action="#" class="auth-form">
+              <div class="form-group">
+                <label for="reg-email">Email address *</label>
+                <input type="email" id="reg-email" class="form-control-fay" required>
+              </div>
+              <div class="form-group">
+                <p class="auth-note">A link to set a new password will be sent to your email address.</p>
+                <p class="auth-note mb-4">Your personal data will be used to support your experience throughout this
+                  website, to manage access to your account, and for other purposes described in our <a
+                    href="privacy-policy.html">privacy policy</a>.</p>
+              </div>
+              <button type="submit" class="btn btn-outline-fay w-100">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    // Slick Carousel Initialization
+
+
+
+
+
+    // Slick Carousel Initialization
+    $(document).ready(function () {
+      // Testimonial Carousel
+      $('.testimonial-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 800,
+        fade: true,
+        cssEase: 'linear',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        appendDots: $('.testimonial-pagination'),
+        customPaging: function (slider, i) {
+          return '<span class="slick-dot"></span>';
+        }
+      });
+
+      // Gallery Carousel
+      $('.gallery-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('.gallery-prev'),
+        nextArrow: $('.gallery-next'),
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+      const $carousel = $('.rituals-carousel');
+
+      function updateStaggeredLayout() {
+        // Remove existing class from all slides
+        $carousel.find('.ritual-card').removeClass('ritual-card-offset');
+
+        // Find currently visible active slides in the DOM
+        const $activeSlides = $carousel.find('.slick-active');
+        if ($activeSlides.length === 3) {
+          // Add offset to the middle one (index 1 of active set)
+          $activeSlides.eq(1).find('.ritual-card').addClass('ritual-card-offset');
+        }
+      }
+
+      $carousel.on('init afterChange', function (event, slick, currentSlide) {
+        updateStaggeredLayout();
+      });
+
+      $carousel.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        // Run update when transition starts and ends
+        setTimeout(updateStaggeredLayout, 50);
+      });
+
+      $carousel.slick({
+        dots: true,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        appendDots: $('.pagination-dots'),
+        customPaging: function (slider, i) {
+          return '<span class="dot"></span>';
+        },
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+
+      // Initial run
+      const slickInstance = $carousel.slick('getSlick');
+      updateStaggeredLayout(slickInstance);
+    });
+
+    // Countdown Timer Logic
+    function updateCountdowns() {
+      const timers = document.querySelectorAll('.countdown-timer');
+
+      timers.forEach(timer => {
+        const endDateStr = timer.getAttribute('data-end-date');
+        if (!endDateStr) return;
+
+        const endDate = new Date(endDateStr).getTime();
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        if (distance < 0) {
+          timer.style.display = 'none';
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const boxes = timer.querySelectorAll('.time-box span');
+        if (boxes.length === 4) {
+          boxes[0].textContent = String(days).padStart(3, '0');
+          boxes[1].textContent = String(hours).padStart(2, '0');
+          boxes[2].textContent = String(minutes).padStart(2, '0');
+          boxes[3].textContent = String(seconds).padStart(2, '0');
+        }
+      });
+    }
+
+    setInterval(updateCountdowns, 1000);
+    updateCountdowns(); // Initial call
+  </script>
+</body>
+
+</html>
